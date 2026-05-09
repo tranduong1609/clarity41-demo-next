@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://clarity41-demo-qxbpdb.teleporthq.app/sitemap.xml
