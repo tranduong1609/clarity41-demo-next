@@ -16,58 +16,69 @@ export default function TrustSection() {
     { value: t('trust.stat3_value'), label: t('trust.stat3_label') },
   ]
 
-  const partners = [t('trust.partner_a'), t('trust.partner_b'), t('trust.partner_c'), t('trust.partner_d')]
+  const bankPartners = [
+    {
+      name: 'Vietcombank',
+      logo: (
+        <img src="/logo-vcb.png" alt="Vietcombank" className="w-full object-contain scale-110" />
+      )
+    },
+    {
+      name: 'Techcombank',
+      logo: (
+        <img src="/logo-tcb.png" alt="Techcombank" className="w-full object-contain scale-110" />
+      )
+    },
+    {
+      name: 'MBBank',
+      logo: (
+        <img src="/logo-mb.png" alt="MB Bank" className="w-full object-contain scale-110" />
+      )
+    },
+    {
+      name: 'VPBank',
+      logo: (
+        <img src="/logo-vp.png" alt="VPBank" className="w-full object-contain scale-110" />
+      )
+    }
+  ]
 
   return (
-    <section className="py-20 px-8 max-w-page mx-auto">
-      {/* Certifications */}
-      <h2 className="text-h2 text-primary-dark dark:text-white text-center mb-12">
-        {t('trust.cert_title')}
-      </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
-        {certs.map((cert, i) => (
-          <div key={i} className="bg-white dark:bg-dark-card rounded-2xl p-6 flex flex-col items-center gap-3 border border-gray-100 dark:border-dark-border shadow-sm hover:shadow-md transition-all">
-            <img src={cert.img} alt={cert.label} className="h-12 object-contain dark:brightness-90" />
-            <span className="text-caption font-bold text-primary-dark dark:text-dark-text tracking-wider">{cert.label}</span>
-          </div>
-        ))}
-      </div>
+    <section className="w-full bg-[#F8FAFC] dark:bg-dark-bg py-20">
+      <div className="max-w-page mx-auto px-8">
+        <div className="flex flex-col gap-16">
 
-      {/* Partners - Two column layout matching design mockup */}
-      <div className="bg-neutral-card dark:bg-dark-card rounded-3xl p-10 md:p-14 border border-transparent dark:border-dark-border transition-colors">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
-          {/* Left column: Title + description + stats */}
-          <div className="flex-1 lg:max-w-md">
-            <h2 className="text-h2 text-primary-dark dark:text-white mb-3 italic">
-              {t('trust.partner_title')}
-            </h2>
-            <p className="text-body text-neutral-body dark:text-dark-muted leading-relaxed mb-8">
-              {t('trust.partner_desc')}
-            </p>
-
-            {/* Stats row */}
-            <div className="flex items-start gap-8">
-              {stats.map((stat, i) => (
-                <div key={i} className="text-left">
-                  <span className="text-h2 font-extrabold text-primary-dark dark:text-white block">{stat.value}</span>
-                  <p className="text-caption font-semibold text-neutral-body dark:text-dark-muted mt-1 uppercase tracking-wider whitespace-pre-line leading-relaxed">
-                    {stat.label}
-                  </p>
+          {/* Section: Certifications */}
+          <div>
+            <h3 className="text-h6 font-bold text-[#003366] dark:text-white text-center mb-10 uppercase tracking-widest">
+              {t('trust.cert_title', { defaultValue: 'Chứng chỉ & Kiểm định' })}
+            </h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              {certs.map((cert, i) => (
+                <div key={i} className="bg-white dark:bg-dark-card rounded-2xl p-8 border border-[#E2E8F0] dark:border-dark-border shadow-sm flex flex-col items-center justify-center hover:shadow-md transition-shadow">
+                  <img src={cert.img} alt={cert.label} className=" object-contain mb-4 dark:brightness-90" />
+                  <span className="text-[15px] font-bold text-[#64748B] dark:text-dark-text tracking-widest uppercase text-center">{cert.label}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right column: Partner grid 2x2 */}
-          <div className="flex-1 w-full">
-            <div className="grid grid-cols-2 gap-4">
-              {partners.map((partner, i) => (
-                <div key={i} className="bg-white dark:bg-dark-surface rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-all border border-gray-100 dark:border-dark-border flex items-center justify-center min-h-[100px]">
-                  <span className="text-primary-dark dark:text-dark-text font-semibold text-h6">{partner}</span>
+          {/* Section: Partners */}
+          <div>
+            <h3 className="text-h6 font-bold text-[#003366] dark:text-white text-center mb-10 uppercase tracking-widest">
+              {t('trust.partner_title', { defaultValue: 'Đối tác chiến lược' })}
+            </h3>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              {bankPartners.map((partner, i) => (
+                <div key={i} className="bg-white dark:bg-dark-card rounded-2xl p-8 border border-[#E2E8F0] dark:border-dark-border shadow-sm flex items-center justify-center h-32 hover:shadow-md transition-shadow">
+                  <div className="w-full max-h-full flex items-center justify-center">
+                    {partner.logo}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>

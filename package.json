@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@teleporthq/react-components": "latest",
+    "lucide-react": "^1.16.0",
     "next": "^16.2.4",
     "next-intl": "^4.10.1",
     "react": "^19.2.5",

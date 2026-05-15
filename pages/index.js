@@ -6,7 +6,6 @@ import FeaturesSection from '../components/FeaturesSection'
 import ComparisonSection from '../components/ComparisonSection'
 import ProcessSection from '../components/ProcessSection'
 import TrustSection from '../components/TrustSection'
-import PricingSection from '../components/PricingSection'
 import CTASection from '../components/CTASection'
 import Footer from '../components/Footer'
 
@@ -17,7 +16,7 @@ export default function Home() {
     <>
       <Head>
         <title>{locale === 'vi' ? 'Clarity41 - Nền tảng Pentest Thế hệ mới' : 'Clarity41 - Next-Gen Pentest Platform'}</title>
-        <meta name="description" content={locale === 'vi' 
+        <meta name="description" content={locale === 'vi'
           ? 'Nền tảng PtaaS thế hệ mới kết hợp kiểm thử tự động với chuyên gia. Triển khai nhanh. Chi phí tối ưu.'
           : 'Next-generation PtaaS platform combining automated testing with experts. Fast deployment. Optimized cost.'
         } />
@@ -26,14 +25,13 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      
-      <main className="bg-neutral-bg dark:bg-dark-bg min-h-screen transition-colors duration-300">
+
+      <main className="bg-neutral-bg dark:bg-dark-bg min-h-screen transition-colors duration-300 mt-16">
         <HeroSection />
         <FeaturesSection />
         <ComparisonSection />
         <ProcessSection />
         <TrustSection />
-        <PricingSection />
         <CTASection />
       </main>
 
