@@ -13,7 +13,7 @@ export default function ProcessSection() {
   ]
 
   return (
-    <section id="section-3" className="py-24 px-8 bg-[#F8FAFC] dark:bg-dark-bg transition-colors">
+    <section id="section-3" className="pb-24 px-8 bg-[#F8FAFC] dark:bg-dark-bg transition-colors">
       <div className="max-w-page mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-[28px] font-extrabold text-[#003366] dark:text-white uppercase mb-3 tracking-wider">
