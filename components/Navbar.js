@@ -7,7 +7,6 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 dark:bg-dark-surface/90 dark:border-dark-border transition-colors duration-300">
       <div className="max-w-page mx-auto px-8 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <img src="/logo-v41.png" alt="V41" className="h-8 md:h-10 object-contain" />
           <span className="text-h4 font-extrabold text-primary-dark dark:text-white tracking-tight mt-1">CLARITY41</span>
         </a>
         <div className="hidden md:flex items-center gap-8">

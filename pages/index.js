@@ -31,7 +31,7 @@ export default function Home() {
         <FeaturesSection />
         <ComparisonSection />
         <ProcessSection />
-        <TrustSection />
+        {/* <TrustSection /> */}
         <CTASection />
       </main>
 
